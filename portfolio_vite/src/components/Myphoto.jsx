@@ -1,27 +1,33 @@
 import Navbar from "./Navbar";
 import Photo from "./Photo";
-
+import Contact from "./Contact";
 
 function Myphoto() {
   return (
-    // ใส่ relative ให้กรอบนอกสุด และตั้งค่าพื้นหลัง
-    <div className="relative w-full h-screen bg-[#F5F5F5] overflow-y-auto">
-      
-      {/* ส่วนของ Navbar (ลอยอยู่บนสุด) */}
-      <div className="absolute top-0 left-0 w-full z-50">
+    <div className="min-h-screen w-full bg-[#F8FAFC] text-slate-900 selection:bg-indigo-600 selection:text-white flex flex-col justify-between">
+      <div>
         <Navbar />
+
+        {/* Header Section for Photos */}
+        <div className="pt-32 pb-12 bg-white border-b border-slate-200 text-center">
+          <div className="max-w-7xl mx-auto px-6">
+
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mt-3 mb-3">
+              My Photo Gallery
+            </h1>
+            <p className="max-w-2xl mx-auto text-slate-600 text-sm sm:text-base">
+              Beyond writing code, I enjoy capturing moments and composing visual perspectives through photography.
+            </p>
+          </div>
+        </div>
+
+        {/* Photo Gallery Component */}
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          <Photo />
+        </div>
       </div>
 
-      {/* 
-
-      */}
-      <div className="flex flex-col items-center w-full pt-25    px-10">
-        
-        <p className="text-4xl font-bold text-black mb-6">My Photos</p>
-        
-        <Photo />
-      </div>
-      
+      <Contact />
     </div>
   );
 }
