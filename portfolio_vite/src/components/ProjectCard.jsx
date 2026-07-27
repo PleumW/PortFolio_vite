@@ -22,20 +22,6 @@ function ProjectCard({ project }) {
               alt={project.title} 
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" 
             />
-            
-            {/* Category Pill Tag */}
-            <div className="absolute top-3 left-3 z-10">
-              <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold uppercase tracking-wider bg-black text-white border border-black group-hover:bg-white group-hover:text-black transition-colors shadow-xs">
-                {project.category}
-              </span>
-            </div>
-
-            {/* Year Tag */}
-            <div className="absolute top-3 right-3 z-10">
-              <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 text-black border border-black shadow-2xs">
-                {project.year || "2026"}
-              </span>
-            </div>
           </div>
 
           {/* Idle State Content (Visible by default, disappears on hover matching Home Page card logic) */}
@@ -49,21 +35,6 @@ function ProjectCard({ project }) {
                 {project.shortDesc}
               </p>
             </div>
-
-            {/* Tech Stack Pills (Monochrome style) */}
-            <div className="flex flex-wrap gap-1 mt-3">
-              {project.tags.slice(0, 4).map((tag, i) => (
-                <span key={i} className="text-[10px] font-extrabold px-2 py-0.5 rounded-md bg-gray-100 border border-black text-black">
-                  {tag}
-                </span>
-              ))}
-              {project.tags.length > 4 && (
-                <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded-md bg-gray-100 border border-black text-gray-600">
-                  +{project.tags.length - 4}
-                </span>
-              )}
-            </div>
-
           </div>
 
           {/* Hover State Details Overlay (Smoothly fades in inside the card over the text area when hovered) */}
@@ -86,15 +57,6 @@ function ProjectCard({ project }) {
                   ))}
                 </div>
               )}
-            </div>
-
-            {/* Tech Stack in Hover Overlay */}
-            <div className="flex flex-wrap gap-1 pt-1">
-              {project.tags.slice(0, 3).map((tag, idx) => (
-                <span key={idx} className="px-1.5 py-0.5 rounded bg-gray-800 text-[9px] font-mono text-gray-200 border border-gray-700">
-                  {tag}
-                </span>
-              ))}
             </div>
           </div>
 
@@ -119,11 +81,8 @@ function ProjectCard({ project }) {
           >
             <div className="flex items-center justify-between border-b-2 border-black pb-4 mb-5">
               <div className="flex items-center gap-3">
-                <span className="px-3 py-1 rounded-lg text-xs font-mono font-bold uppercase bg-black text-white border border-black">
-                  {project.category}
-                </span>
                 <span className="text-xs font-semibold text-gray-600">
-                  {project.role || "Full-Stack Developer"} • {project.year || "2026"}
+                  {project.role || "Full-Stack Developer"}
                 </span>
               </div>
               <button 

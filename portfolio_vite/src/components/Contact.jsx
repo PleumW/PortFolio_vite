@@ -20,7 +20,7 @@ function Contact() {
         </svg>
       ),
       mainText: "Prince of Songkla University (PSU)",
-      subText: "Songkhla / Bangkok, Thailand",
+      subText: "Suratthani Campus",
       actionLabel: "Open Map",
       action: () => window.open("https://maps.google.com/?q=Prince+of+Songkla+University", "_blank")
     },
@@ -32,21 +32,21 @@ function Contact() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
         </svg>
       ),
-      mainText: "lovepleum123@gmail.com",
+      mainText: "pleumwisarat@gmail.com",
       subText: "6640011034@psu.ac.th",
       actionLabel: copiedText === "email" ? "Copied!" : "Copy Email",
-      action: () => handleCopy("lovepleum123@gmail.com", "email")
+      action: () => handleCopy("pleumwisarat@gmail.com", "email")
     },
     {
       id: "phone",
       title: "Telephone",
+      subText: "Phone",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="w-6 h-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
         </svg>
       ),
       mainText: "(+66) 80-640-6710",
-      subText: "Mon — Fri (9:00 - 18:00)",
       actionLabel: copiedText === "phone" ? "Copied!" : "Copy Number",
       action: () => handleCopy("0806406710", "phone")
     },
@@ -59,7 +59,7 @@ function Contact() {
         </svg>
       ),
       mainText: "GitHub / PleumW",
-      subText: "LinkedIn / Facebook",
+      subText: "Github",
       actionLabel: "Visit GitHub",
       action: () => window.open("https://github.com/PleumW", "_blank")
     }
@@ -79,9 +79,6 @@ function Contact() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-black">
             Contect
           </h2>
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-            Whether you have a job opportunity, internship inquiry, or want to discuss a potential web or UI project, feel free to reach out via email or phone directly.
-          </p>
         </div>
 
         {/* Contact Info Cards Grid */}

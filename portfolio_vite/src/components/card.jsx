@@ -32,9 +32,9 @@ const Card = () => {
     <>
       {/* Responsive container for the 3 signature square cards */}
       <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-8 sm:gap-10 pt-6 pb-4 w-full">
-        
+
         {/* Card 1: Web Development */}
-        <Link 
+        <Link
           to="/projects"
           onClick={(e) => {
             if (window.innerWidth < 768) {
@@ -49,10 +49,10 @@ const Card = () => {
 
           {/* Interactive Square Card */}
           <div className="relative w-full h-full bg-white rounded-2xl border-2 border-black p-5 flex flex-col justify-between transition-all duration-300 group-hover:bg-black group-hover:text-white shadow-sm overflow-hidden z-10">
-            
+
             {/* Idle State Content (Visible by default, disappears on hover according to user request) */}
             <div className="flex flex-col justify-between flex-grow transition-opacity duration-300 opacity-100 group-hover:opacity-0 group-hover:pointer-events-none">
-              
+
               {/* Top Bar: Number Tag & Icon */}
               <div className="flex items-center justify-between w-full">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-gray-400">
@@ -83,7 +83,7 @@ const Card = () => {
                 ✦ KEY HIGHLIGHTS
               </span>
               <p className="text-[11px] text-gray-200 leading-relaxed mb-3 font-normal line-clamp-3">
-                React 19, Vite &amp; Tailwind architecture with REST APIs, real-time data &amp; 99% Lighthouse UX.
+                A highly motivated IT senior with hands-on experience in full-stack web development. Passionate about bridging the gap between intuitive UI/UX designs and secure, scalable backend architectures
               </p>
               <div className="flex flex-wrap gap-1">
                 <span className="px-1.5 py-0.5 rounded bg-gray-800 text-[9px] font-mono text-gray-200 border border-gray-700">React 19</span>
@@ -103,7 +103,7 @@ const Card = () => {
 
 
         {/* Card 2: UX / UI Design */}
-        <Link 
+        <Link
           to="/projects"
           onClick={(e) => {
             if (window.innerWidth < 768) {
@@ -116,10 +116,10 @@ const Card = () => {
           <div className="absolute inset-0 bg-black rounded-2xl border-2 border-black translate-x-2.5 translate-y-2.5 transition-transform duration-300 group-hover:translate-x-3.5 group-hover:translate-y-3.5"></div>
 
           <div className="relative w-full h-full bg-white rounded-2xl border-2 border-black p-5 flex flex-col justify-between transition-all duration-300 group-hover:bg-black group-hover:text-white shadow-sm overflow-hidden z-10">
-            
+
             {/* Idle State Content */}
             <div className="flex flex-col justify-between flex-grow transition-opacity duration-300 opacity-100 group-hover:opacity-0 group-hover:pointer-events-none">
-              
+
               <div className="flex items-center justify-between w-full">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-gray-400">
                   02 // DESIGN
@@ -148,7 +148,7 @@ const Card = () => {
                 ✦ KEY HIGHLIGHTS
               </span>
               <p className="text-[11px] text-gray-200 leading-relaxed mb-3 font-normal line-clamp-3">
-                45+ high-fidelity mobile &amp; web screens with WCAG accessibility &amp; micro-interactions.
+                An IT senior and aspiring UX/UI Designer who bridges the gap between user-centered design and technical feasibility. Passionate about transforming complex problems into intuitive wireframes and production-ready interfaces.
               </p>
               <div className="flex flex-wrap gap-1">
                 <span className="px-1.5 py-0.5 rounded bg-gray-800 text-[9px] font-mono text-gray-200 border border-gray-700">Figma</span>
@@ -167,20 +167,20 @@ const Card = () => {
 
 
         {/* Card 3: Photography */}
-        <Link 
-          to="/myphoto" 
+        <Link
+          to="/myphoto"
           className="relative w-[220px] h-[220px] group cursor-pointer block no-underline shrink-0"
         >
           <div className="absolute inset-0 bg-black rounded-2xl border-2 border-black translate-x-2.5 translate-y-2.5 transition-transform duration-300 group-hover:translate-x-3.5 group-hover:translate-y-3.5"></div>
 
           <div className="relative w-full h-full bg-white rounded-2xl border-2 border-black p-5 flex flex-col justify-between transition-all duration-300 group-hover:bg-black group-hover:text-white shadow-sm overflow-hidden z-10">
-            
+
             {/* Idle State Content */}
             <div className="flex flex-col justify-between flex-grow transition-opacity duration-300 opacity-100 group-hover:opacity-0 group-hover:pointer-events-none">
-              
+
               <div className="flex items-center justify-between w-full">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-gray-400">
-                  03 // LENS
+                  03 // picture
                 </span>
                 <div className="w-8 h-8 rounded-lg bg-gray-100 border border-black/20 flex items-center justify-center text-black">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
@@ -226,11 +226,11 @@ const Card = () => {
 
       {/* Mobile/Touch accessible popup when tapped without hover */}
       {activeModal && (
-        <div 
+        <div
           onClick={() => setActiveModal(null)}
           className="fixed inset-0 z-[200] bg-black/80 backdrop-blur-xs flex items-center justify-center p-6"
         >
-          <div 
+          <div
             onClick={(e) => e.stopPropagation()}
             className="bg-white rounded-2xl max-w-md w-full p-6 text-black relative border-2 border-black shadow-2xl animate-in fade-in zoom-in-95 duration-200"
           >
@@ -238,22 +238,22 @@ const Card = () => {
               <span className="text-xs font-mono font-bold text-gray-500">
                 {projectDetails[activeModal].subtitle}
               </span>
-              <button 
+              <button
                 onClick={() => setActiveModal(null)}
                 className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold text-sm border-none cursor-pointer hover:bg-gray-800"
               >
                 ✕
               </button>
             </div>
-            
+
             <h3 className="text-2xl font-extrabold tracking-tight mb-3 text-black">
               {projectDetails[activeModal].title}
             </h3>
-            
+
             <p className="text-sm text-gray-700 leading-relaxed mb-6 font-medium">
               {projectDetails[activeModal].desc}
             </p>
-            
+
             <div className="mb-6">
               <h5 className="text-xs font-extrabold uppercase tracking-widest text-gray-400 mb-2.5">
                 Key Technologies &amp; Methods:

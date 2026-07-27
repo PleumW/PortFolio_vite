@@ -13,11 +13,8 @@ function Myphoto() {
           <div className="max-w-7xl mx-auto px-6">
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mt-3 mb-3">
-              My Photo Gallery
+              My Photos
             </h1>
-            <p className="max-w-2xl mx-auto text-slate-600 text-sm sm:text-base">
-              Beyond writing code, I enjoy capturing moments and composing visual perspectives through photography.
-            </p>
           </div>
         </div>
 

@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import profilePic from '../assets/14668415-9D2B-47EA-9A6D-FBC33B1BC7C8-Photoroom.png';
+import profilePic from '../assets/Profile.png';
 
 function Hero() {
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-[92vh] pt-28 pb-16 md:pt-36 md:pb-24 flex items-center justify-center overflow-hidden bg-[#F5F5F5] text-black">
 
@@ -20,7 +23,7 @@ function Hero() {
             </h1>
 
             <p className="text-lg sm:text-xl font-medium text-gray-700 mb-8 max-w-2xl leading-relaxed">
-              A passionate <strong className="text-black font-bold">Frontend / Full-Stack Developer</strong> &amp; <strong className="text-black font-bold">UX/UI Designer</strong>. Crafting pixel-perfect, highly responsive web applications that combine robust engineering with minimalist visual elegance.
+              I am punnapob wisarat nickname pleum from Information Technology student specializing in front-end development (React, Tailwind CSS, Vite) and UI wireframing (Figma). Familiar with back-end integration and web fundamentals. Proven ability to work effectively in team environments through part-time and photography experience, with a strong drive for continuous learning.
             </p>
 
             {/* Action Buttons - matching PageTwo & Contact theme */}
@@ -33,18 +36,13 @@ function Hero() {
                 <span className="group-hover:translate-x-1 transition-transform">➚</span>
               </Link>
 
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const el = document.getElementById('contact');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }}
+              <button
+                onClick={() => setIsCvModalOpen(true)}
                 className="w-full sm:w-auto text-center px-8 py-4 rounded-2xl bg-white text-black border-2 border-black hover:bg-black hover:text-white font-bold text-sm sm:text-base transition-all duration-300 shadow-sm flex items-center justify-center gap-2 no-underline"
               >
                 <span>Download CV</span>
                 <span>↓</span>
-              </a>
+              </button>
             </div>
 
             {/* University summary */}
@@ -61,7 +59,7 @@ function Hero() {
           <div className="w-full lg:w-5/12 flex items-center justify-center relative">
 
             {/* Main Image Frame Container */}
-            <div className="relative w-72 sm:w-80 md:w-96 h-80 sm:h-96 md:h-[430px] flex items-center justify-center">
+            <div className="relative w-72 sm:w-80 md:w-96 h-96 sm:h-[420px] md:h-[520px] flex items-center justify-center">
 
               {/* Decorative Backdrop shape */}
               <div className="absolute inset-0 rounded-[2.5rem] bg-[#e8e7e7] border-2 border-black rotate-6 scale-95 transition-transform duration-500 hover:rotate-3"></div>
@@ -71,26 +69,16 @@ function Hero() {
                 <img
                   src={profilePic}
                   alt="Punnapob Wisarat Profile"
-                  className="w-full h-full object-contain object-bottom transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
 
                 {/* Name Overlay on photo bottom */}
                 <div className="absolute bottom-0 inset-x-0 p-4 bg-black/90 text-white text-center sm:text-left border-t-2 border-black">
                   <p className="font-extrabold text-lg sm:text-xl leading-tight">Punnapob Wisarat</p>
-                  <p className="text-xs text-gray-300 font-semibold">Frontend • UX/UI • Full-Stack</p>
+                  <p className="text-xs text-gray-300 font-semibold">Nickname : Pleum</p>
                 </div>
               </div>
 
-              {/* Floating Tech Card 1: React & Vite */}
-              <div className="absolute -top-6 -left-6 sm:-left-8 bg-white rounded-2xl p-3.5 shadow-md border-2 border-black flex items-center gap-3 z-20">
-                <div className="w-10 h-10 rounded-xl bg-black text-white flex items-center justify-center font-bold text-lg">
-                  ⚡
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-black">React &amp; Vite</p>
-                  <p className="text-[11px] text-gray-600 font-medium">High Performance UI</p>
-                </div>
-              </div>
 
 
 
@@ -100,6 +88,41 @@ function Hero() {
 
         </div>
       </div>
+
+      {/* CV Modal */}
+      {isCvModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+          <div className="bg-white border-2 border-black rounded-3xl p-6 md:p-8 max-w-sm w-full shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative transform transition-all">
+            <button
+              onClick={() => setIsCvModalOpen(false)}
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-black hover:text-white border-2 border-transparent hover:border-black transition-all font-bold"
+            >
+              ✕
+            </button>
+            <h3 className="text-2xl font-black mb-2 text-black text-center  ">เลือกภาษาที่ต้องการ</h3>
+            <p className="text-gray-600 mb-6 font-medium text-sm text-center">อยากดูเรซูเม่แบบไหนครับ</p>
+            <div className="flex flex-col gap-3">
+              <a
+                href="/resume-th.pdf"
+                download="Resume_Punnapob_TH.pdf"
+                onClick={() => setIsCvModalOpen(false)}
+                className="w-full py-3 px-4 rounded-xl bg-black text-white text-center font-bold border-2 border-black hover:bg-white hover:text-black transition-all"
+              >
+                ภาษาไทย
+              </a>
+              <a
+                href="/resume-en.pdf"
+                download="Resume_Punnapob_ENG.pdf"
+                onClick={() => setIsCvModalOpen(false)}
+                className="w-full py-3 px-4 rounded-xl bg-white text-black text-center font-bold border-2 border-black hover:bg-black hover:text-white transition-all"
+              >
+                English
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
     </section>
   );
 }

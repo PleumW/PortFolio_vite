@@ -58,7 +58,7 @@ function PageTwo() {
           <div className="flex flex-col items-center mb-12 text-center w-full">
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 px-4 py-4 justify-between items-center w-full max-w-4xl bg-white/60 rounded-3xl border-2 border-black p-6 shadow-xs">
               <p className="text-xs sm:text-sm text-gray-800 font-medium max-w-[520px] text-left leading-relaxed">
-                As a 4th-year Computer Science student at <strong className="text-black font-extrabold">Prince of Songkla University</strong>, I specialize in bridging robust backend software logic with captivating, accessible frontend interfaces. Explore my technical domains below.
+                As a 4th-year information technology student at <strong className="text-black font-extrabold">Prince of Songkla University suratthani campus</strong>, I specialize in bridging robust backend software logic with captivating, accessible frontend interfaces. Explore my technical domains below.
               </p>
 
               <Link
@@ -71,7 +71,6 @@ function PageTwo() {
             </div>
           </div>
 
-          {/* Our refined Swiss editorial square cards */}
           <Card />
 
         </div>
