@@ -6,7 +6,7 @@ function Hero() {
   const [isCvModalOpen, setIsCvModalOpen] = useState(false);
 
   return (
-    <section className="relative min-h-[92vh] pt-28 pb-16 md:pt-36 md:pb-24 flex items-center justify-center overflow-hidden bg-[#F5F5F5] text-black">
+    <section className="relative min-h-[92vh] pt-20 pb-16 md:pt-24 md:pb-24 flex items-center justify-center overflow-hidden bg-[#F5F5F5] text-black">
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
@@ -14,13 +14,24 @@ function Hero() {
           {/* Left Column: Text & CTAs */}
           <div className="w-full lg:w-7/12 text-left flex flex-col items-start">
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-black tracking-tight leading-[1.08] mb-4">
-              Hello, I&apos;m <br />
-              <span className="text-black underline decoration-black decoration-4 underline-offset-8">
-                PUNNAPOB WISARAT
-              </span>
-            </h1>
+            {/* Main Headline & Mobile Image Row */}
+            <div className="flex flex-row items-center justify-between w-full gap-4 mb-4">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-black tracking-tight leading-[1.15]">
+                Hello, I&apos;m <br />
+                <span className="text-black underline decoration-black decoration-4 underline-offset-8">
+                  PUNNAPOB WISARAT
+                </span>
+              </h1>
+
+              {/* Mobile Profile Image (Visible only on small screens, next to Hello) */}
+              <div className="flex lg:hidden relative w-32 h-36 sm:w-40 sm:h-44 rounded-2xl overflow-hidden border-2 border-black shadow-sm shrink-0">
+                <img
+                  src={profilePic}
+                  alt="Punnapob Wisarat Profile"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
 
             <p className="text-lg sm:text-xl font-medium text-gray-700 mb-8 max-w-2xl leading-relaxed">
               I am punnapob wisarat nickname pleum from Information Technology student specializing in front-end development (React, Tailwind CSS, Vite) and UI wireframing (Figma). Familiar with back-end integration and web fundamentals. Proven ability to work effectively in team environments through part-time and photography experience, with a strong drive for continuous learning.
@@ -55,11 +66,11 @@ function Hero() {
 
           </div>
 
-          {/* Right Column: Profile Showcase & Floating Cards */}
-          <div className="w-full lg:w-5/12 flex items-center justify-center relative">
+          {/* Right Column: Profile Showcase & Floating Cards (Hidden on mobile, shown on lg) */}
+          <div className="hidden lg:flex w-full lg:w-5/12 items-center justify-center relative">
 
             {/* Main Image Frame Container */}
-            <div className="relative w-72 sm:w-80 md:w-96 h-96 sm:h-[420px] md:h-[520px] flex items-center justify-center">
+            <div className="relative w-80 sm:w-96 md:w-[28rem] lg:w-[30rem] h-[400px] sm:h-[480px] md:h-[560px] lg:h-[600px] flex items-center justify-center">
 
               {/* Decorative Backdrop shape */}
               <div className="absolute inset-0 rounded-[2.5rem] bg-[#e8e7e7] border-2 border-black rotate-6 scale-95 transition-transform duration-500 hover:rotate-3"></div>
