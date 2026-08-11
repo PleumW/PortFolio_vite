@@ -22,7 +22,7 @@ function Contact() {
       mainText: "Prince of Songkla University (PSU)",
       subText: "Suratthani Campus",
       actionLabel: "Open Map",
-      action: () => window.open("https://maps.google.com/?q=Prince+of+Songkla+University", "_blank")
+      action: () => window.open("https://maps.google.com/?q=Prince+of+Songkla+University+Surat+Thani+Campus", "_blank")
     },
     {
       id: "email",
