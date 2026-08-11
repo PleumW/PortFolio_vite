@@ -40,6 +40,14 @@ export const projectsData = [
     demoUrl: "https://github.com/PleumW",
     githubUrl: "https://github.com/PleumW"
   },
-
-
+  {
+    id: 5,
+    title: "Website XPlamo",
+    shortDesc: "เว็บไซต์ซื้อขายพลาสติกโมเดลกันดั้ม XPlamo",
+    fullDesc: "ทำเว็บไซต์เกี่ยวกับการซื้อขายพลาสติกโมเดล XPlamo โดยใช้ React, Vite และ Tailwind CSS เพื่อสร้างให้เป็น responsive และทำระบบ Back-end สำหรับการจัดเก็บข้อมูล login, order, product รวมไปถึงระบบจ่ายเงินต่างๆ โดยใช้ MySQL ในการจัดเก็บข้อมูล",
+    tags: ["React", "Vite", "Tailwind CSS", "MySQL"],
+    image: "/projects/xplamo.png",
+    demoUrl: "https://github.com/PleumW",
+    githubUrl: "https://github.com/PleumW"
+  }
 ];

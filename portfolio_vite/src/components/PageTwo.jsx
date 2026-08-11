@@ -54,23 +54,6 @@ function PageTwo() {
 
         {/* Right / Center Section: Editorial Summary & Square Cards */}
         <div className="flex flex-col items-center justify-center w-full">
-
-          <div className="flex flex-col items-center mb-12 text-center w-full">
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 px-4 py-4 justify-between items-center w-full max-w-4xl bg-white/60 rounded-3xl border-2 border-black p-6 shadow-xs">
-              <p className="text-xs sm:text-sm text-gray-800 font-medium max-w-[520px] text-left leading-relaxed">
-                As a 4th-year information technology student at <strong className="text-black font-extrabold">Prince of Songkla University suratthani campus</strong>, I specialize in bridging robust backend software logic with captivating, accessible frontend interfaces. Explore my technical domains below.
-              </p>
-
-              <Link
-                to="/about"
-                className="px-6 py-3 bg-black text-white hover:bg-white hover:text-black border-2 border-black rounded-2xl font-extrabold text-xs uppercase tracking-wider transition-all duration-300 shadow-sm flex items-center justify-center gap-2 group shrink-0 no-underline"
-              >
-                <span>About me</span>
-                <span className="group-hover:translate-x-1 transition-transform font-bold text-sm">➚</span>
-              </Link>
-            </div>
-          </div>
-
           <Card />
 
         </div>

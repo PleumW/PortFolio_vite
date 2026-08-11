@@ -1,5 +1,4 @@
 import Navbar from './Navbar';
-import PageThree from './Pagethree';
 import Contact from './Contact';
 import profilePic from '../assets/about_profile.jpg';
 
@@ -20,11 +19,9 @@ function About() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mt-4 mb-6 text-slate-900">
                 Punnapob Wisarat
               </h1>
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-                I am a dedicated 4th-year university student at <strong className="text-slate-900">Prince of Songkla University suratthani campus (PSU)</strong>, specializing in modern web development, frontend architecture, and UX/UI design. My mission is to bridge the gap between engineering robustness and human-centered design.
-              </p>
+
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                Over the past 4 years, I have honed my skills in <strong className="text-indigo-600">React 19, Vite, Tailwind CSS, Node.js, and Figma</strong>. Whether working independently on full-stack applications or leading collaborative senior capstone projects, I strive for clean code, responsive layouts, and zero-compromise performance.
+                สวัสดีครับ ผมนายปุณณภพ วิสารัตน์ นักศึกษาสาขาเทคโนโลยีสารสนเทศ มีความถนัดในด้านการพัฒนา Front-end (React, Tailwind CSS, Vite) และการออกแบบ UI Wireframe (Figma) มีความเข้าใจในพื้นฐานการพัฒนาเว็บไซต์และการประกอบคอมพิวเตอร์ มีทักษะการทำงานเป็นทีมซึ่งประยุกต์ใช้จากประสบการณ์ทำงาพาร์ทไทม์และถ่ายภาพ พร้อมด้วยความมุ่งมั่นและกระตือรือร้นที่จะเรียนรู้พัฒนาตนเองอย่างต่อเนื่องครับ
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-200">
@@ -34,8 +31,8 @@ function About() {
                   <p className="text-sm font-bold text-slate-800 mt-1">Prince of Songkla University Suratthani Campus</p>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Availability</h4>
-                  <p className="text-sm font-bold text-emerald-600 mt-1">Internship 2026-2027</p>
+                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Internship</h4>
+                  <p className="text-sm font-bold text-emerald-600 mt-1 text-nowrap">16 November 2026 – 5 March 2027</p>
                 </div>
               </div>
             </div>
