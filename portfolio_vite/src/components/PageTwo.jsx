@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function PageTwo() {
   return (
-    <div className="bg-[#e8e7e7] w-full overflow-hidden text-black">
+    <div className="bg-[#e8e7e7] w-full overflow-hidden text-black ">
       {/* Top horizontal black divider line positioned right at the 0px color boundary */}
       <div className="w-full h-[2px] bg-black"></div>
 
@@ -19,7 +19,7 @@ function PageTwo() {
             </div>
             <div className="py-2 transition-transform duration-300 group-hover:translate-x-1.5">
               <span className="text-[10px] font-mono font-bold tracking-widest text-gray-500 uppercase block">Domain 01</span>
-              <h3 className="text-base sm:text-lg font-extrabold text-black tracking-tight mt-0.5">Web Development</h3>
+              <h3 className="text-base sm:text-lg font-extrabold ">Web Development</h3>
               <p className="text-xs font-semibold text-gray-600 mt-0.5">Full-Stack &amp; Frontend Architecture</p>
             </div>
           </div>
@@ -32,7 +32,7 @@ function PageTwo() {
             </div>
             <div className="py-2 transition-transform duration-300 group-hover:translate-x-1.5">
               <span className="text-[10px] font-mono font-bold tracking-widest text-gray-500 uppercase block">Domain 02</span>
-              <h3 className="text-base sm:text-lg font-extrabold text-black tracking-tight mt-0.5">UX UI Design</h3>
+              <h3 className="text-base sm:text-lg font-extrabold ">UX UI Design</h3>
               <p className="text-xs font-semibold text-gray-600 mt-0.5">Figma Systems &amp; Prototyping</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ function PageTwo() {
             </div>
             <div className="py-2 transition-transform duration-300 group-hover:translate-x-1.5">
               <span className="text-[10px] font-mono font-bold tracking-widest text-gray-500 uppercase block">Domain 03</span>
-              <h3 className="text-base sm:text-lg font-extrabold text-black tracking-tight mt-0.5">Photography</h3>
+              <h3 className="text-base sm:text-lg font-extrabold text-black tracking-tight mt-0.5 ">Photography</h3>
               <p className="text-xs font-semibold text-gray-600 mt-0.5">Visual Perspectives &amp; Composition</p>
             </div>
           </div>
@@ -61,8 +61,8 @@ function PageTwo() {
       </div>
 
       {/* Bottom Skills Timeline Flow - preserving exact ↓ bouncing circle & connected dots */}
-      <div className="w-full px-6 sm:px-12  pb-16  mt-8 ">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0 relative">
+      <div className="w-full px-6 sm:px-12 pb-16 mt-8 hidden lg:block">
+        <div className="max-w-6xl mx-auto flex flex-row flex-wrap items-center justify-center gap-4 lg:gap-0 relative">
 
 
           {/* Skill 1: Visual Studio Code */}
@@ -74,7 +74,7 @@ function PageTwo() {
           </div>
 
           {/* Horizontal Connecting Line */}
-          <div className="hidden lg:block flex-1 h-[2px] bg-black mx-2"></div>
+          <div className="flex-1 h-[2px] bg-black mx-2 min-w-[20px]"></div>
 
           {/* Skill 2: Tailwind CSS */}
           <div className="flex flex-col items-center group cursor-pointer">
@@ -85,7 +85,7 @@ function PageTwo() {
           </div>
 
           {/* Horizontal Connecting Line */}
-          <div className="hidden lg:block flex-1 h-[2px] bg-black mx-2"></div>
+          <div className="flex-1 h-[2px] bg-black mx-2 min-w-[20px]"></div>
 
           {/* Skill 3: Vite */}
           <div className="flex flex-col items-center group cursor-pointer">
@@ -96,7 +96,7 @@ function PageTwo() {
           </div>
 
           {/* Horizontal Connecting Line */}
-          <div className="hidden lg:block flex-1 h-[2px] bg-black mx-2"></div>
+          <div className="flex-1 h-[2px] bg-black mx-2 min-w-[20px]"></div>
 
           {/* Skill 4: React */}
           <div className="flex flex-col items-center group cursor-pointer">
@@ -107,7 +107,7 @@ function PageTwo() {
           </div>
 
           {/* Horizontal Connecting Line */}
-          <div className="hidden lg:block flex-1 h-[2px] bg-black mx-2"></div>
+          <div className="flex-1 h-[2px] bg-black mx-2 min-w-[20px]"></div>
 
           {/* Skill 5: Vue */}
           <div className="flex flex-col items-center group cursor-pointer">

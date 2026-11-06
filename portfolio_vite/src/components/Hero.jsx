@@ -6,7 +6,7 @@ function Hero() {
   const [isCvModalOpen, setIsCvModalOpen] = useState(false);
 
   return (
-    <section className="relative min-h-[92vh] pt-20 pb-16 md:pt-24 md:pb-24 flex items-center justify-center overflow-hidden bg-[#F5F5F5] text-black">
+    <section className="relative min-h-[92vh]  pb-16 md:pt-24 md:pb-24 flex items-center justify-center overflow-hidden bg-[#F5F5F5] text-black">
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
@@ -18,7 +18,7 @@ function Hero() {
             <div className="flex flex-row items-center justify-between w-full gap-4 mb-4">
               <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-black tracking-tight leading-[1.15]">
                 Hello, I&apos;m <br />
-                <span className="text-black underline decoration-black decoration-4 underline-offset-8">
+                <span className="">
                   PUNNAPOB WISARAT
                 </span>
               </h1>
