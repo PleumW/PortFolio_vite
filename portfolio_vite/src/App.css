@@ -1,10 +1,15 @@
 /* App.css - Global Styles and Animations for Portfolio */
 @import "tailwindcss";
 
+/* ─── Tailwind Dark Mode via class strategy ─────────────────────────── */
+@variant dark (&:where(.dark, .dark *));
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* prevent horizontal scroll from animations */
 }
 
+/* ─── Light / Dark base colors ──────────────────────────────────────── */
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +17,15 @@ body {
   background-color: #F8FAFC;
   color: #0F172A;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+html.dark body {
+  background-color: #0F172A;
+  color: #F8FAFC;
+}
+
+
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {

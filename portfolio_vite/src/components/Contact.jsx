@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ScrollReveal from './ScrollReveal';
 
 function Contact() {
   const [copiedText, setCopiedText] = useState('');
@@ -66,59 +67,57 @@ function Contact() {
   ];
 
   return (
-    <section id="contact" className="pb-16 md:pb-24 bg-[#e8e7e7] text-black relative overflow-hidden">
-
-      {/* Top dividing line positioned right at the top 0px edge/intersection between PageThree (#F5F5F5) and Contact (#e8e7e7) */}
-      <div className="w-full h-[2px] bg-black"></div>
+    <section id="contact" className="pb-16 md:pb-24 bg-[#e8e7e7] dark:bg-[#1E293B] text-black dark:text-white relative overflow-hidden transition-colors duration-300">
+      {/* Top dividing line */}
+      <div className="w-full h-[2px] bg-black dark:bg-white"></div>
 
       <div className="pt-16 md:pt-20 max-w-7xl mx-auto px-6 md:px-12 relative z-10">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-black">
-            Contect
-          </h2>
-        </div>
+        <ScrollReveal direction="up" threshold={0.1}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+              Contact
+            </h2>
+          </div>
+        </ScrollReveal>
 
         {/* Contact Info Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {contactCards.map((card) => (
-            <div
-              key={card.id}
-              className="bg-white p-6 border-2 border-black shadow-xs flex flex-col justify-between hover:bg-black hover:text-white transition-all duration-300 group"
-            >
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-black text-white group-hover:bg-white group-hover:text-black flex items-center justify-center mb-4 transition-colors border border-black">
-                  {card.icon}
+          {contactCards.map((card, i) => (
+            <ScrollReveal key={card.id} direction="up" delay={i * 80} threshold={0.08}>
+              <div className="bg-white dark:bg-[#0F172A] p-6 border-2 border-black dark:border-white shadow-xs flex flex-col justify-between hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 group h-full">
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-black dark:bg-white text-white dark:text-black group-hover:bg-white group-hover:text-black dark:group-hover:bg-black dark:group-hover:text-white flex items-center justify-center mb-4 transition-colors border border-black dark:border-white">
+                    {card.icon}
+                  </div>
+                  <h3 className="text-lg font-bold transition-colors mb-2">{card.title}</h3>
+                  <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-gray-100 dark:group-hover:text-gray-800 transition-colors break-words">{card.mainText}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-600 transition-colors mt-1">{card.subText}</p>
                 </div>
-                <h3 className="text-lg font-bold text-black group-hover:text-white transition-colors mb-2">{card.title}</h3>
-                <p className="text-sm font-semibold text-gray-800 group-hover:text-gray-100 transition-colors break-words">{card.mainText}</p>
-                <p className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors mt-1">{card.subText}</p>
-              </div>
 
-              <button
-                onClick={card.action}
-                className="mt-6 w-full py-2.5 px-4 rounded-xl bg-black text-white group-hover:bg-white group-hover:text-black text-xs font-bold transition-colors flex items-center justify-center gap-1.5 border-2 border-black cursor-pointer"
-              >
-                <span>{card.actionLabel}</span>
-                <span className="text-xs">➚</span>
-              </button>
-            </div>
+                <button
+                  onClick={card.action}
+                  className="mt-6 w-full py-2.5 px-4 rounded-xl bg-black dark:bg-white text-white dark:text-black group-hover:bg-white group-hover:text-black dark:group-hover:bg-black dark:group-hover:text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 border-2 border-black dark:border-white cursor-pointer"
+                >
+                  <span>{card.actionLabel}</span>
+                  <span className="text-xs">➚</span>
+                </button>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Footer */}
-        <footer className="mt-16 pt-10 border-t-2 border-black text-center text-xs text-gray-700 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-semibold">Punnapob Wisarat </p>
+        <footer className="mt-16 pt-10 border-t-2 border-black dark:border-white text-center text-xs text-gray-700 dark:text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="font-semibold">Punnapob Wisarat</p>
           <div className="flex items-center gap-6 font-semibold">
-            <a href="https://github.com/PleumW" target="_blank" rel="noopener noreferrer" className="text-black font-bold hover:text-gray-600 transition-colors no-underline">
+            <a href="https://github.com/PleumW" target="_blank" rel="noopener noreferrer" className="text-black dark:text-white font-bold hover:text-gray-600 dark:hover:text-gray-400 transition-colors no-underline">
               GitHub Profile
             </a>
-            <a href="mailto:lovepleum123@gmail.com" className="text-black font-bold hover:text-gray-600 transition-colors no-underline">
+            <a href="mailto:lovepleum123@gmail.com" className="text-black dark:text-white font-bold hover:text-gray-600 dark:hover:text-gray-400 transition-colors no-underline">
               Email
             </a>
-
           </div>
         </footer>
 

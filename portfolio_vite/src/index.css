@@ -11,9 +11,14 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
   font-family: var(--sans);
   background-color: #F8FAFC;
   color: #0F172A;
@@ -23,9 +28,11 @@ body {
 
 #root {
   width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
